@@ -1,12 +1,17 @@
 language: go
 sudo: false
 go:
-  - 1.4
+  - 1.5
+  - 1.6
   - 1.7
+  - 1.8
   - 1.9
-install:
+before_script:
+  - apt-get install imagemagick
+  # glide
   - go get github.com/Masterminds/glide
   - glide install
+  # enable vendering
   - export GO15VENDOREXPERIMENT=1
 script:
   - cd thumbnail && go build .
