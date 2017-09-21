@@ -8,6 +8,7 @@ go:
   - 1.9
 install:
   # Imagemagick
+  - sudo apt-get install libmagickwand-dev
   - export IMAGEMAGICK_VERSION=6.9.6-8
   - sh -c "
     wget https://www.imagemagick.org/download/releases/ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz;
