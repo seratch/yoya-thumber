@@ -11,7 +11,8 @@ install:
   - export IMAGEMAGICK_VERSION=6.9.6-8
   - sh -c "
     wget https://www.imagemagick.org/download/releases/ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz;
-    tar xzf ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz;
+    xz -dv ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz;
+    tar xfv ImageMagick-${IMAGEMAGICK_VERSION}.tar;
     cd ImageMagick-${IMAGEMAGICK_VERSION};
     ./configure --prefix=/opt/imagemagick;
     make -j;
