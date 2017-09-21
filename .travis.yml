@@ -16,7 +16,7 @@ install:
     ./configure --prefix=/opt/imagemagick
     make -j
     sudo make install
-  "
+    "
   # glide
   - go get github.com/Masterminds/glide
   - glide install
