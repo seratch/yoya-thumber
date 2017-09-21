@@ -9,10 +9,9 @@ go:
 install:
   # Imagemagick
   - export IMAGEMAGICK_VERSION=6.9.6-8
-  - curl -fsSL https://www.imagemagick.org/download/releases/ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz > \
-    ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz && \
+  - curl -fsSL https://www.imagemagick.org/download/releases/ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz > ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz && \
     tar xf ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz && \
-    cd /usr/local/src/ImageMagick-${IMAGEMAGICK_VERSION} && \
+    cd ImageMagick-${IMAGEMAGICK_VERSION} && \
     ./configure \
         '--prefix=/usr/local' \
         '--disable-openmp' \
