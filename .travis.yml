@@ -6,11 +6,32 @@ go:
   - 1.7
   - 1.8
   - 1.9
-addons:
-  apt:
-    packages:
-      - imagemagick
 install:
+  # Imagemagick
+  - export IMAGEMAGICK_VERSION=6.9.6-8
+  - curl -fsSL https://www.imagemagick.org/download/releases/ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz > \
+    ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz && \
+    tar xf ImageMagick-${IMAGEMAGICK_VERSION}.tar.xz && \
+    cd /usr/local/src/ImageMagick-${IMAGEMAGICK_VERSION} && \
+    ./configure \
+        '--prefix=/usr/local' \
+        '--disable-openmp' \
+        '--disable-opencl' \
+        '--with-webp' \
+        '--with-fontconfig' \
+        '--disable-dependency-tracking' \
+        '--enable-shared' \
+        '--disable-static' \
+        '--with-xml' \
+        '--without-included-ltdl' \
+        '--with-ltdl-include=/usr/include' \
+        '--with-ltdl-lib=/usr/lib64' \
+        '--without-perl' \
+        'CFLAGS=-O3 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -grecord-gcc-switches -m64 -mtune=generic' \
+        'LDFLAGS=-Wl,-z,relro' \
+        'CXXFLAGS=-O3 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -grecord-gcc-switches -m64 -mtune=generic' && \
+    make && \
+    make install
   # glide
   - go get github.com/Masterminds/glide
   - glide install
