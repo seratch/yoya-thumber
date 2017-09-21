@@ -1,0 +1,12 @@
+package: .
+import:
+- package: github.com/golang/glog
+- package: github.com/naoina/toml
+  version: ~0.1.1
+- package: github.com/smartnews/yoya-thumber
+  subpackages:
+  - thumbnail
+- package: gopkg.in/gographics/imagick.v2
+  version: ~3.1.1
+  subpackages:
+  - imagick

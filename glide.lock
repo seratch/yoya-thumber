@@ -1,0 +1,24 @@
+hash: 7422ba814f2fac8040a8df7f85dacedc9532195e94d186f7e55c4e13ff4d6e73
+updated: 2017-09-21T14:09:16.630512586+09:00
+imports:
+- name: github.com/golang/glog
+  version: 23def4e6c14b4da8ac2ed8007337bc5eb5007998
+- name: github.com/naoina/go-stringutil
+  version: 6b638e95a32d0c1131db0e7fe83775cbea4a0d0b
+- name: github.com/naoina/toml
+  version: e6f5723bf2a66af014955e0888881314cf294129
+  subpackages:
+  - ast
+- name: github.com/smartnews/yoya-thumber
+  version: 2eb9d4d51daeafa92250e8b4079cce8bb6094734
+  subpackages:
+  - thumbnail
+- name: gopkg.in/gographics/imagick.v2
+  version: b231e622f10dba6f961e73e1b3ce0b55cc39f831
+  subpackages:
+  - imagick
+- name: gopkg.in/gographics/imagick.v3
+  version: b231e622f10dba6f961e73e1b3ce0b55cc39f831
+  subpackages:
+  - imagick/types
+testImports: []

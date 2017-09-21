@@ -1,0 +1,12 @@
+language: go
+sudo: false
+go:
+  - 1.4
+  - 1.7
+  - 1.9
+install:
+  - go get github.com/Masterminds/glide
+  - glide install
+script:
+  - cd thumbnail && go build .
+  - cd thumberd  && go build .
