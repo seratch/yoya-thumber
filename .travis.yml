@@ -8,7 +8,7 @@ go:
   - 1.9
 install:
   # Imagemagick
-  - sudo apt-get install imagemagick=6.9.9-14
+  - sudo apt-get install imagemagick=6.9.7.4
   # glide
   - go get github.com/Masterminds/glide
   - glide install
