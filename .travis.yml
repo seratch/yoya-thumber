@@ -9,13 +9,13 @@ go:
 install:
   # Imagemagick
   - sh -c "
-    export IMAGEMAGICK_VERSION=6.9.6-8
-    wget http://www.imagemagick.org/download/legacy/ImageMagick-${IMAGEMAGICK_VERSION}.tar.gz
-    tar xzf ImageMagick-${IMAGEMAGICK_VERSION}.tar.gz
-    cd ImageMagick-${IMAGEMAGICK_VERSION}
-    ./configure --prefix=/opt/imagemagick
-    make -j
-    sudo make install
+    export IMAGEMAGICK_VERSION=6.9.6-8;
+    wget http://www.imagemagick.org/download/legacy/ImageMagick-${IMAGEMAGICK_VERSION}.tar.gz;
+    tar xzf ImageMagick-${IMAGEMAGICK_VERSION}.tar.gz;
+    cd ImageMagick-${IMAGEMAGICK_VERSION};
+    ./configure --prefix=/opt/imagemagick;
+    make -j;
+    sudo make install;
     "
   # glide
   - go get github.com/Masterminds/glide
